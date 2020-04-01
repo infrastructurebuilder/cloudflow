@@ -1,0 +1,12 @@
+{
+  "JOBTYPE"   : "plotting",
+  "OFS"       : "tbofs",
+  "CDATE"     : "20200326",
+  "HH"        : "00",
+  "INDIR"     : "/Users/patrick/RPS/com/nos-noaa/tbofs.20200326",
+  "OUTDIR"    : "/Users/patrick/RPS/com/nos-noaa/plots/tbofs.20200326",
+  "VARS"      : ["temp", "zeta", "w", "salt"],
+  "BUCKET"    : "ioos-cloud-sandbox",
+  "BCKTFLDR"  : "public/nosofs/plots/tbofs",
+  "FSPEC"     : "nos.tbofs.fields.f*z.nc"
+}
