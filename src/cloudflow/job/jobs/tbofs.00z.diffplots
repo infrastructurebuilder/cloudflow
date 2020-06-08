@@ -1,7 +1,7 @@
 {
   "JOBTYPE"   : "plotting_diff",
   "OFS"       : "tbofs",
-  "CDATE"     : "20200310",
+  "CDATE"     : "today",
   "HH"        : "00",
   "INDIR"     : "auto",
   "OUTDIR"    : "auto",

@@ -1,7 +1,7 @@
 {
   "JOBTYPE"   : "plotting_diff",
   "OFS"       : "negofs",
-  "CDATE"     : "20200312",
+  "CDATE"     : "today",
   "HH"        : "03",
   "INDIR"     : "auto",
   "OUTDIR"    : "auto",
