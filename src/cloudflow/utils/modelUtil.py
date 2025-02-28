@@ -50,7 +50,7 @@ def scrub_liveocean():
 def readConfig(configfile):
     """ converts a JSON document to a python dictionary """
 
-    if debug: print(f"DEBUG: in romsUtil : configfile is: {configfile}")
+    if debug: print(f"DEBUG: in modelUtil : configfile is: {configfile}")
 
     with open(configfile, 'r') as cf:
         cfDict = json.load(cf)
@@ -75,11 +75,9 @@ def sedoceanin(template, outfile, settings):
             newline = line
 
             for key, value in settings.items():
-                # print('In sedoceanin :',key, ' ', value)
                 newline = re.sub(key, str(value), newline)
 
             outfile.write(re.sub(key, value, newline))
-
     return
 
 
@@ -97,12 +95,6 @@ def makeOceanin(NPROCS, settings, template, outfile, ratio=1.0):
     }
 
     settings.update(reptiles)
-    sedoceanin(template, outfile, settings)
-    return
-
-#####################################################################
-
-def makeADCIRCin(settings, template, outfile):
     sedoceanin(template, outfile, settings)
     return
 
