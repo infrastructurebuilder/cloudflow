@@ -74,6 +74,7 @@
 ! first so all information arrays can be initialized properly.
 
      VARNAME =  /com/eccofs/input/varinfo.yaml
+!     VARNAME =  varinfo.yaml
 
 ! Number of nested grids.
 
@@ -435,7 +436,7 @@ LtracerSponge == F F                            ! temperature, salinity, inert
 ! origin for tidal forcing, and model reference time for output
 ! NetCDF units attribute.
 
-      DSTART =  0.0d0                   ! days
+      DSTART =  0.0d0                      ! days
   TIDE_START =  0.0d0                      ! days
     TIME_REF =  20110101.0d0               ! yyyymmdd.dd
 
