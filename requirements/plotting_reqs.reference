@@ -1,0 +1,12 @@
+plotting
+pyproj
+cmocean
+numpy
+matplotlib
+netCDF4
+dask
+distributed
+Pillow
+boto3
+cartopy
+xarray
