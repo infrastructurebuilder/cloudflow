@@ -120,7 +120,7 @@ class NFSScratchDisk(ScratchDisk):
                                         stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
             if result.returncode != 0:
                 print(result.stdout)
-                log.warning(f'Unable to remove {mountpath} on {host}')
+                log.warning(f'Unable to remove {self.mountpath} on {host}')
 
             try:
                 result = subprocess.run(['ssh', host, 'sudo', 'ln', '-s', self.mount, self.mountpath],
