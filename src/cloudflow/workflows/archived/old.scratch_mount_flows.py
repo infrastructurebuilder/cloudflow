@@ -153,6 +153,8 @@ def plot_flow(postconf, postjobfile) -> Flow:
         # Setup the post job
         plotjob = tasks.job_init(postmach, postjobfile)
 
+        storage_service = tasks.storage_init(provider)
+
         # Start the machine
         pmStarted = ctasks.cluster_start(postmach)
 
@@ -291,7 +293,7 @@ def notebook_flow(postconf,jobfile) -> Flow:
 
         storage_service = tasks.storage_init(provider)
         # Optionally inject a user supplied python script
-        #notebook = 'specify'
+        notebook = 'specify'
         #notebook = 'cloudflow/inject/kenny/cloud_sandbot.py'
         injected = tasks.fetchpy_and_run(plotjob, storage_service, notebook)
 
@@ -426,11 +428,6 @@ def inject_notebook() :
         return "PASSED"
     else:
         return "FAILED"
-
-    print(result)
-
-    if result == "PASSED":
-        nbutils.inject(pyfile, storage_provider)
 
 
 def handler(signal_received, frame):
