@@ -22,6 +22,7 @@ def main(fp):
     import datetime
 
     import boto3
+    from botocore.exceptions import ClientError
     import cartopy.crs as ccrs
     import cartopy.feature as cfeature
     import cmocean
