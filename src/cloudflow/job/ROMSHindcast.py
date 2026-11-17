@@ -154,7 +154,7 @@ class ROMSHindcast(Job):
             if 'EXPNAME' in cfDict:
                 self.EXPNAME = cfDict["EXPNAME"]
             else:
-                raise Exception(f"EXPNAME (experiment name) missing in {this.configfile}")
+                raise Exception(f"EXPNAME (experiment name) missing in {self.configfile}")
 
 
         # Coupled models have additional input files 
