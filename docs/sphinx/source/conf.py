@@ -12,14 +12,16 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../../'))
-sys.path.insert(0, os.path.abspath('../../cloudflow/'))
-sys.path.insert(0, os.path.abspath('../../cloudflow/cluster/'))
-sys.path.insert(0, os.path.abspath('../../cloudflow/job/'))
-sys.path.insert(0, os.path.abspath('../../cloudflow/workflows/'))
-sys.path.insert(0, os.path.abspath('../../cloudflow/plotting/'))
-sys.path.insert(0, os.path.abspath('../../cloudflow/services/'))
-sys.path.insert(0, os.path.abspath('../../cloudflow/utils/'))
+# Exported: the modules are documented from the installed cloudflow package,
+# plotting included. The pages name each module by its bare name, so each
+# subpackage's directory goes on the path, wherever the package is
+# installed.
+import cloudflow
+
+for base in cloudflow.__path__:
+    for sub in ('cluster', 'job', 'workflows', 'plotting', 'services', 'utils'):
+        if os.path.isdir(os.path.join(base, sub)):
+            sys.path.insert(0, os.path.join(base, sub))
 
 import cloudflow
 
