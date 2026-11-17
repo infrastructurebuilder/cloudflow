@@ -1,0 +1,124 @@
+{
+  "job/ADCIRCForecast.py": {
+    "sys.path changed at import": 1
+  },
+  "job/ADCIRCReanalysis.py": {
+    "sys.path changed at import": 1
+  },
+  "job/ADCIRC_Experiment.py": {
+    "sys.path changed at import": 1
+  },
+  "job/DFLOWFM_Experiment.py": {
+    "sys.path changed at import": 1
+  },
+  "job/FVCOMForecast.py": {
+    "sys.path changed at import": 1
+  },
+  "job/FVCOM_Experiment.py": {
+    "sys.path changed at import": 1
+  },
+  "job/FVCOM_Hindcast.py": {
+    "sys.path changed at import": 1
+  },
+  "job/Model_Experiment_Template.py": {
+    "sys.path changed at import": 1
+  },
+  "job/PYTHON_Experiment.py": {
+    "sys.path changed at import": 1
+  },
+  "job/Plotting.py": {
+    "sys.path changed at import": 1
+  },
+  "job/ROMSForecast.py": {
+    "sys.path changed at import": 1
+  },
+  "job/ROMSHindcast.py": {
+    "sys.path changed at import": 1
+  },
+  "job/ROMS_Experiment.py": {
+    "sys.path changed at import": 1
+  },
+  "job/SCHISM_Experiment.py": {
+    "sys.path changed at import": 1
+  },
+  "job/SCHISM_Hindcast.py": {
+    "sys.path changed at import": 1
+  },
+  "job/UFS_RegressionTest.py": {
+    "sys.path changed at import": 1
+  },
+  "job/WRF_Hydro_Experiment.py": {
+    "sys.path changed at import": 1
+  },
+  "plotting/plot_fvcom.py": {
+    "sys.path changed at import": 1
+  },
+  "plotting/plot_roms.py": {
+    "sys.path changed at import": 1
+  },
+  "services/testscratch.py": {
+    "a home directory": 2,
+    "sys.path changed at import": 1,
+    "the monorepo by name": 2
+  },
+  "workflows/archived/old.fsxflows.py": {
+    "sys.path changed at import": 2
+  },
+  "workflows/archived/old.nosofs_quasi_ops.py": {
+    "sys.path changed at import": 2
+  },
+  "workflows/archived/old.run_adnoc.py": {
+    "sys.path changed at import": 1
+  },
+  "workflows/archived/old.scratch_mount_flows.py": {
+    "sys.path changed at import": 2
+  },
+  "workflows/archived/old.test_driver.py": {
+    "sibling configuration by relative path": 1,
+    "sys.path changed at import": 1
+  },
+  "workflows/archived/test_notebook.py": {
+    "sibling configuration by relative path": 2,
+    "sys.path changed at import": 1
+  },
+  "workflows/cluster_tasks.py": {
+    "sys.path changed at import": 1
+  },
+  "workflows/experiment_launcher.sh": {
+    "the monorepo by name": 1
+  },
+  "workflows/fcst_launcher.sh": {
+    "a home directory": 1,
+    "the monorepo by name": 1
+  },
+  "workflows/flows.py": {
+    "sys.path changed at import": 2,
+    "the monorepo by name": 1
+  },
+  "workflows/job_tasks.py": {
+    "sys.path changed at import": 1
+  },
+  "workflows/scripts/liveocean_fallback.sh": {
+    "a home directory": 1,
+    "sibling configuration by relative path": 1,
+    "the monorepo by name": 1
+  },
+  "workflows/scripts/random_ofs.py": {
+    "sys.path changed at import": 3
+  },
+  "workflows/scripts/run_liveocean.sh": {
+    "sibling configuration by relative path": 1,
+    "the monorepo by name": 2
+  },
+  "workflows/tasks.py": {
+    "sys.path changed at import": 1,
+    "the monorepo by name": 2
+  },
+  "workflows/ufs_launcher.sh": {
+    "the monorepo by name": 1
+  },
+  "workflows/workflow_main.py": {
+    "sibling configuration by relative path": 3,
+    "sys.path changed at import": 1
+  }
+}
