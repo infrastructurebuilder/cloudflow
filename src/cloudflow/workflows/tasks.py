@@ -631,7 +631,7 @@ def cora_reanalysis_run(cluster: Cluster, job: Job):
 
         if result.returncode != 0:
             log.exception(f'Forecast failed ... result: {result.returncode}')
-            raise Exception('Forecast failed') from e
+            raise Exception('Forecast failed')
 # fix double logging and generic 
     except Exception as e:
         log.exception('Exception during subprocess.run :' + str(e))
