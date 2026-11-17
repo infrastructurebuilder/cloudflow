@@ -128,7 +128,7 @@ class ADCIRCReanalysis(Job):
         if self.APP == 'adcirc-cora':
             self.__make_cora_config()
         else:
-            raise Exception(f"I don't know how to create a config for {APP}")
+            raise Exception(f"I don't know how to create a config for {self.APP}")
 
 
     def __make_cora_config(self):
