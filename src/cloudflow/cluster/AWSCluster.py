@@ -12,7 +12,7 @@ import getpass
 from pathlib import Path
 
 import boto3
-from botocore.exceptions import ClientError
+from botocore.exceptions import ClientError, WaiterError
 
 # Mapping from AWS region codes to the long-form display names required by the
 # AWS Pricing API.  The Pricing API uses the human-readable region label shown
