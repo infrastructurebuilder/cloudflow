@@ -85,10 +85,10 @@ def main():
         flows.reanalysis_flow(conf, jobfile)
 
     elif jobtype == "plotting":
-        flows.plot_flow(postconf, jobfile)
+        flows.plot_flow(conf, jobfile)
 
     elif jobtype == "plotting_diff":
-        flows.diff_plot_flow(postconf, jobfile)
+        flows.diff_plot_flow(conf, jobfile)
 
     elif jobtype == "ufs_regressiontest":
         #TODO: can include other UFS jobtypes later
