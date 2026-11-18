@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import os
 import subprocess
+import tarfile
 import zipfile
 from pathlib import Path
 
@@ -73,3 +74,14 @@ def test_the_installed_package_finds_its_own_files(installed: Path, tmp_path: Pa
 def test_the_installed_command_runs(installed: Path, tmp_path: Path) -> None:
     out = run(str(installed / "cloudflow"), cwd=tmp_path, expect=1)
     assert "cluster_config job_config" in out
+
+
+def test_the_source_distribution_leaves_out_the_planning_material(tmp_path: Path) -> None:
+    """Spec Kit's files, the specs and CLAUDE.md are for working on cloudflow, not for shipping it."""
+    run("uv", "build", "--sdist", "--out-dir", str(tmp_path), cwd=PROJECT)
+    (built,) = tmp_path.glob("cloudflow-*.tar.gz")
+    with tarfile.open(built) as archive:
+        names = [name.split("/", 1)[1] for name in archive.getnames() if "/" in name]
+    assert "src/cloudflow/__init__.py" in names
+    leaked = [name for name in names if name.split("/")[0] in {".specify", ".claude", "specs", "CLAUDE.md"}]
+    assert not leaked, leaked

@@ -47,6 +47,11 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 packages = ["src/cloudflow"]
 
+# The source distribution takes every tracked file unless told otherwise;
+# planning and agent material is not part of what is shipped.
+[tool.hatch.build.targets.sdist]
+exclude = [".specify", ".claude", "specs", "CLAUDE.md"]
+
 [tool.uv]
 default-groups = ["dev", "docs"]
 
