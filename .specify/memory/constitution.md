@@ -11,12 +11,16 @@ repository and directs the work. "An agent" is any coding agent working in it.
 
 ### I. The Original's Behaviour, Packaged
 
-- What cloudflow does is what Cloud-Sandbox's `cloudflow/` does. The package
-  changes how it is installed and imported, not what it does.
-- A difference from the original is a patch in Cloud-Sandbox, named for the
-  defect it corrects and described in Cloud-Sandbox's `exportit/MAP.md`
-  ("Corrections made in the copy"; nine since 2026-11-12), never a quiet
-  edit (principle S3).
+- What cloudflow does is what the original's `cloudflow/` did (Cloud-Sandbox
+  at the unit's baseline, and the original repository's later commits as they
+  are synced). The package changes how it is installed and imported, not what
+  it does, unless a spec says otherwise.
+- A difference from the original is deliberate and written down: the nine
+  corrections made in the copy (described in Cloud-Sandbox's
+  `exportit/MAP.md`, "Corrections made in the copy"), which are commits in
+  this repository's history, and since its originals were deleted from
+  Cloud-Sandbox (2026-11-18), each change made here, in a commit that says
+  what it corrects (principle S3). Never a quiet edit.
 - Defects found in the original and left as they are are recorded, with the
   reason, and are not fixed in passing.
 
@@ -40,13 +44,15 @@ package.
 - Files written for the package are held to the whole lint and type-check
   rule set.
 - Copied code is held to the floor: no syntax errors and no undefined names.
-  Raising a copied file to the full rules is a change to its original or a
-  patch, made in Cloud-Sandbox, with a spec.
+  Raising a copied file to the full rules is a change made here, with a spec
+  of its own, because it makes every later sync from the original harder to
+  merge.
 
-**Why:** the copied code is the original's; its style is not this
-repository's to change by itself.
+**Why:** the copied code is the original's, and later changes to the original
+are merged into it; restyling it in passing would turn every such merge into a
+conflict.
 
-<!-- csis-shared: begin, version 1.0.0. Written by Cloud-Sandbox's `just constitution` from exportit/tools/constitution/shared.md; do not edit here. -->
+<!-- csis-shared: begin, version 2.0.0. Written by Cloud-Sandbox's `just constitution` from exportit/tools/constitution/shared.md; do not edit here. -->
 
 ### S1. Acceptance Tests Run Through the Justfile
 
@@ -85,28 +91,35 @@ and between people.
 **Why:** the operator reviews each plan and owns each decision before work is
 spent on it; and a push or a release cannot be taken back.
 
-### S3. A Copied File Is Changed in Cloud-Sandbox
+### S3. A Copied File: Changed in Cloud-Sandbox, Then Owned Here
 
 This repository was made on 2026-11-17 from a unit of
 `infrastructurebuilder/Cloud-Sandbox`, where it is kept as a git submodule
-under `exportit/`. Many of its files are copies of files that are still in
-Cloud-Sandbox, its originals, and Cloud-Sandbox's mapping file for this unit
-(`exportit/<unit>.map`) says which.
+under `exportit/`. Many of its files are copies of files of the original
+repository, and Cloud-Sandbox's mapping file for this unit
+(`exportit/<unit>.map`) says which. What may change them depends on whether
+Cloud-Sandbox still holds their originals:
 
-- While its original is in Cloud-Sandbox, a copied file is never edited here.
-  It changes when its original changes, or by a patch in Cloud-Sandbox
-  (`exportit/<unit>.patches/`); Cloud-Sandbox's `just export <unit>` writes
-  the result into this repository, and its `just export-check` fails on any
-  copied file that differs from its original plus its patches.
-- Only a file the mapping file calls `new` is this repository's own to change
-  here: its build, its tests, its pages, and the files written only for it.
-- A spec that needs a copied file changed says so, and the patch or the change
-  to the original is among its tasks, made in Cloud-Sandbox.
-- This principle is removed, by an amendment of the shared part, when
-  Cloud-Sandbox deletes this unit's originals (its stage 22).
+- **While it does** (the mapping file does not say `owned`), a copied file is
+  never edited here. It changes when its original changes, or by a patch in
+  Cloud-Sandbox (`exportit/<unit>.patches/`); Cloud-Sandbox's `just export
+  <unit>` writes the result into this repository, and its `just test` fails
+  on any copied file that differs from the original at the unit's baseline
+  plus its patches. Only a file the mapping file calls `new` is this
+  repository's own to change here, and a spec that needs a copied file
+  changed puts the patch among its tasks, made in Cloud-Sandbox.
+- **Once Cloud-Sandbox has deleted this unit's originals** (its stage 22; the
+  mapping file says `owned`), this repository owns its copied files and
+  changes them here like any other. A later change to the original repository
+  arrives by sync: Cloud-Sandbox's `just export-sync` merges the original's
+  new commits onto a feature branch here, with their authors, and a conflict
+  with this repository's own changes stops the sync for the operator to
+  settle. Cloud-Sandbox's `just export-lineage` holds this repository's
+  history to the original's, which is what a sync depends on.
 
-**Why:** the copies are held to their originals, file for file, so that every
-difference between the two is written down where both can be seen.
+**Why:** while both exist, the copies are held to their originals file for
+file, so that every difference is written down where both can be seen; once
+the originals are gone, the unit is the only place its files live.
 
 ### S4. Nothing Goes Toward `ioos`
 
@@ -185,4 +198,4 @@ wheel holds `src/cloudflow` only, and the source distribution leaves out
 `.specify/`, `.claude/`, `specs/` and `CLAUDE.md`. AWS access only through what
 the original uses (boto3); no test reaches AWS.
 
-**Version**: 1.0.0 | **Ratified**: 2026-11-18 | **Last Amended**: 2026-11-18
+**Version**: 2.0.0 | **Ratified**: 2026-11-18 | **Last Amended**: 2026-11-18
