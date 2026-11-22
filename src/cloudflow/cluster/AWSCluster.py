@@ -32,6 +32,11 @@ __license__ = "BSD 3-Clause"
 
 MAX_MINUTES = 2 * 60
 
+# The tag every node cloudflow launches carries. csis-sandbox-terraform's
+# reaper/ lets its terminating function stop only instances with this tag
+# (spec 003, FR-008); its launch_tag_key and launch_tag_value default to it.
+LAUNCH_TAG = {"Key": "csis:launched-by", "Value": "cloudflow"}
+
 log = logging.getLogger('workflow')
 
 homedir = Path.home()
@@ -405,6 +410,8 @@ class AWSCluster(Cluster):
 
         # This is used to with EC2 policy to restrict ec2 visibility to current subnet
         self.tags.append({ "Key": "ApprovedSubnet", "Value": f"{self.subnet_id}" })
+        # So that the zombie-node guard may stop it (spec 003)
+        self.tags.append(dict(LAUNCH_TAG))
 
         print(f"self.tags: {self.tags}")
 
