@@ -34,7 +34,7 @@ Do not edit the copied files here. Change the original and run
 
 | Path | What |
 | --- | --- |
-| `src/cloudflow/cluster/` | Starting and stopping compute nodes (`AWSCluster`, `LocalCluster`), and the two Lambda functions that terminate nodes left running |
+| `src/cloudflow/cluster/` | Starting and stopping compute nodes (`AWSCluster`, `LocalCluster`). The two Lambda functions that find and stop nodes left running are `csis-sandbox-terraform`'s since spec 003 (its `reaper/`) |
 | `src/cloudflow/job/` | One class per kind of model run, and `templates/`, the model input files they fill in |
 | `src/cloudflow/services/` | Storage: S3 and scratch disks |
 | `src/cloudflow/utils/` | Shared helpers |

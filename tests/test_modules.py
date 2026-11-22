@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import importlib
-import os
 import subprocess
 import sys
 from pathlib import Path
@@ -12,10 +11,6 @@ from support import module_name, package_dir, python_files
 # Modules that cannot be imported as they stand, and why. Each is a defect or a
 # script in the copied code; the list shrinks as the originals are corrected.
 NOT_IMPORTABLE = {
-    "cloudflow.cluster.lambda_identify_zombies": "an AWS Lambda handler: it reads TABLE_NAME, "
-    "AWS_REGION and ORG_MAX_MINUTES from the environment when it is loaded",
-    "cloudflow.cluster.lambda_terminate_zombies": "an AWS Lambda handler: it reads TABLE_NAME, "
-    "AWS_REGION and ORG_MAX_MINUTES from the environment when it is loaded",
     "cloudflow.plotting.hlfs": "an exported notebook: it runs main('hlfs.config') when it is loaded",
     "cloudflow.utils.testutils": "imports modelUtil as a top-level module, which resolves only "
     "when the working directory is utils/",
@@ -52,12 +47,9 @@ def test_the_exceptions_name_real_modules() -> None:
 
 @pytest.mark.parametrize("name", sorted(NOT_IMPORTABLE))
 def test_a_listed_exception_still_fails(name: str, tmp_path: Path) -> None:
-    lambda_settings = {"TABLE_NAME", "AWS_REGION", "ORG_MAX_MINUTES"}
-    env = {key: value for key, value in os.environ.items() if key not in lambda_settings}
     done = subprocess.run(
         [sys.executable, "-c", f"import {name}"],
         cwd=tmp_path,
-        env=env,
         capture_output=True,
         text=True,
         check=False,
