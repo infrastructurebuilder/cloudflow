@@ -1,5 +1,5 @@
 {
-  "about": "Keys cloudflow reads from a cluster description. Written by exportit/tools/configs_schema.py.",
+  "about": "Keys cloudflow reads from a cluster description. Written by cloudflow's tools/configs_schema.py.",
   "read_by": "cloudflow/cluster/ClusterFactory.py",
   "common": {
     "required": {

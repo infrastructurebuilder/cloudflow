@@ -231,7 +231,7 @@ def job_schema() -> dict[str, object]:
         reads = dict_reads(path)
         jobtypes[jobtype] = {"MODEL": model, "class": cls, "file": path.as_posix(), **reads}
     return {
-        "about": "Keys cloudflow reads from a job description. Written by exportit/tools/configs_schema.py.",
+        "about": "Keys cloudflow reads from a job description. Written by cloudflow's tools/configs_schema.py.",
         "read_by": factory.as_posix(),
         "common": common,
         "jobtypes": jobtypes,
@@ -246,7 +246,7 @@ def cluster_schema() -> dict[str, object]:
         path = CLUSTER_DIR / f"{cls}.py"
         platforms[platform] = {"class": cls, "file": path.as_posix(), **dict_reads(path)}
     return {
-        "about": "Keys cloudflow reads from a cluster description. Written by exportit/tools/configs_schema.py.",  # noqa: E501
+        "about": "Keys cloudflow reads from a cluster description. Written by cloudflow's tools/configs_schema.py.",  # noqa: E501
         "read_by": factory.as_posix(),
         "common": dict_reads(factory),
         "platforms": platforms,
