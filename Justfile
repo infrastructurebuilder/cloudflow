@@ -19,9 +19,13 @@ build:
 
 # New files get the full rule set; copied code must have no syntax errors and no undefined names.
 lint:
-    {{ run }} ruff check tests
-    {{ run }} ruff format --check tests
+    {{ run }} ruff check tests tools
+    {{ run }} ruff format --check tests tools
     {{ run }} ruff check --isolated --select E9,F63,F7,F82 src
+
+# Write the schema of job and cluster descriptions again, from the code (tools/configs_schema.py).
+schema:
+    {{ run }} python tools/configs_schema.py --write
 
 # Type-check the new files; any error fails.
 typecheck:

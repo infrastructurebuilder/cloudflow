@@ -1,0 +1,257 @@
+{
+  "cluster.configs/local.config": {
+    "kind": "cluster",
+    "role": "example",
+    "status": "ok"
+  },
+  "cluster.configs/template.ioos": {
+    "kind": "cluster",
+    "role": "template",
+    "status": "ok"
+  },
+  "job.configs/CORA/cora.reanalysis": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/CORA/ec2-user.test.hsofs": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/IOOS/adcirc_florence.fcst": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/IOOS/wrfroms.irene.fcst": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/MODEL_EXPERIMENTS/adcirc.experiment": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/MODEL_EXPERIMENTS/dflowfm.experiment": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/MODEL_EXPERIMENTS/fvcom.experiment": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/MODEL_EXPERIMENTS/python.experiment": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/MODEL_EXPERIMENTS/python_dask_data_parallelism.experiment": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/MODEL_EXPERIMENTS/python_dask_task_parallelism.experiment": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/MODEL_EXPERIMENTS/python_mpi.experiment": {
+    "kind": "job",
+    "role": "template",
+    "status": "ok"
+  },
+  "job.configs/MODEL_EXPERIMENTS/roms.experiment": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/MODEL_EXPERIMENTS/schism.experiment": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/MODEL_EXPERIMENTS/wrf_hydro.experiment": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/NOS/liveocean.00z.diffplots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/NOS/liveocean.00z.plots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/NOS/liveocean.cas7_t0_x4b.hindcast": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/NOS/liveocean.cas7_t0_x4b.hindcast.dt25": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/NOS/liveocean.cas7_t0_x4b.hindcast.dt30": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/NOS/liveocean.diffplots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/NOS/liveocean.fcst": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/cbofs.00z.diffplots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/cbofs.00z.plots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/ciofs.00z.diffplots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/ciofs.00z.plots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/dbofs.00z.diffplots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/dbofs.00z.plots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/eccofs.coldstart": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/eccofs.fcst": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/gomofs.00z.diffplots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/gomofs.00z.plots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/leofs.00z.diffplots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/leofs.00z.plots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/lmhofs.00z.diffplots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/lmhofs.00z.plots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/local.plots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/necofs.hindcast": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/ngofs.03z.diffplots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/ngofs.03z.plots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/secofs.hotstart": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/sfbofs.03z.diffplots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/sfbofs.03z.plots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/tbofs.00z.diffplots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/OFS/tbofs.00z.plots": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/TT/adnoc.fcst": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/TT/nyh.hindcast.1996": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/TT/nyh.hindcast.2020": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/UCLA_ROMS/ucla-roms.exp": {
+    "kind": "job",
+    "role": "example",
+    "status": "ok"
+  },
+  "job.configs/cloud_sandbox_experiment.template": {
+    "kind": "job",
+    "role": "template",
+    "status": "new-model template"
+  }
+}

@@ -42,7 +42,10 @@ Do not edit the copied files here. Change the original and run
 | `tests/` | Tests that need no sandbox |
 | `legacy-tests/` | The original test scripts; they drive a live sandbox |
 | `docs/` | The original instructions and notes; `docs/sphinx/`, the API documentation's sources (stage 8) |
-| `notebooks/`, `notes/`, `examples/` | Material that travels with the code and is not installed |
+| `examples/configs/` | Templates and examples of job and cluster descriptions (`job.configs/`, `cluster.configs/`), with `catalogue.json`: what a site starts from. Each is checked against `schema/` by `tests/test_examples.py`. From `csis-sandbox-configs` since spec 005 |
+| `schema/` | The schema of job and cluster descriptions: every key cloudflow reads, and the line that reads it. Written from `src/` by `tools/configs_schema.py` (`just schema`); `tests/test_configs_schema.py` holds it to the code |
+| `tools/` | `configs_schema.py`, which writes `schema/`; `schema_check.py`, the rules for whether a description is one cloudflow reads. Cloud-Sandbox copies `schema/` and `schema_check.py` into `csis-sandbox-configs`, for the site's own descriptions |
+| `notebooks/`, `notes/`, `examples/cron/` | Material that travels with the code and is not installed |
 | `requirements/` | The original requirement lists, for reference |
 | `legacy/` | The files that `pyproject.toml` replaces: the root `setup.py`, `setup-plotting.sh`, and `plotting-setup.py` (the original's `cloudflow/setup.py`) |
 

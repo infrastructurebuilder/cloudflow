@@ -67,12 +67,12 @@ ignore = ["D203", "D213"]
 "tests/*" = ["D", "PLR2004"]
 
 [tool.pyright]
-include = ["tests"]
-extraPaths = ["tests"]
+include = ["tests", "tools"]
+extraPaths = ["tests", "tools"]
 typeCheckingMode = "standard"
 pythonVersion = "3.12"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["tests"]
+pythonpath = ["tests", "tools"]
 markers = ["slow: builds and installs the wheels, or builds the documentation; run by full-test only"]
