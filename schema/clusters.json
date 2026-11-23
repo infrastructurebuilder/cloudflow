@@ -1,0 +1,46 @@
+{
+  "about": "Keys cloudflow reads from a cluster description. Written by exportit/tools/configs_schema.py.",
+  "read_by": "cloudflow/cluster/ClusterFactory.py",
+  "common": {
+    "required": {
+      "platform": "cloudflow/cluster/ClusterFactory.py:43"
+    },
+    "optional": {},
+    "conditional": {}
+  },
+  "platforms": {
+    "AWS": {
+      "class": "AWSCluster",
+      "file": "cloudflow/cluster/AWSCluster.py",
+      "required": {
+        "platform": "cloudflow/cluster/AWSCluster.py:367",
+        "region": "cloudflow/cluster/AWSCluster.py:368",
+        "nodeType": "cloudflow/cluster/AWSCluster.py:369",
+        "nodeCount": "cloudflow/cluster/AWSCluster.py:370",
+        "tags": "cloudflow/cluster/AWSCluster.py:388",
+        "image_id": "cloudflow/cluster/AWSCluster.py:389",
+        "key_name": "cloudflow/cluster/AWSCluster.py:390",
+        "sg_ids": "cloudflow/cluster/AWSCluster.py:391",
+        "subnet_id": "cloudflow/cluster/AWSCluster.py:392",
+        "placement_group": "cloudflow/cluster/AWSCluster.py:393",
+        "table_name": "cloudflow/cluster/AWSCluster.py:397"
+      },
+      "optional": {
+        "vm_retry_delay": "cloudflow/cluster/AWSCluster.py:373",
+        "vm_max_retries": "cloudflow/cluster/AWSCluster.py:381"
+      },
+      "conditional": {}
+    },
+    "Local": {
+      "class": "LocalCluster",
+      "file": "cloudflow/cluster/LocalCluster.py",
+      "required": {
+        "PPN": "cloudflow/cluster/LocalCluster.py:56",
+        "nodeCount": "cloudflow/cluster/LocalCluster.py:57",
+        "platform": "cloudflow/cluster/LocalCluster.py:86"
+      },
+      "optional": {},
+      "conditional": {}
+    }
+  }
+}

@@ -1,0 +1,369 @@
+{
+  "about": "Keys cloudflow reads from a job description. Written by exportit/tools/configs_schema.py.",
+  "read_by": "cloudflow/job/JobFactory.py",
+  "common": {
+    "required": {
+      "JOBTYPE": "cloudflow/job/JobFactory.py:60",
+      "MODEL": "cloudflow/job/JobFactory.py:61"
+    },
+    "optional": {},
+    "conditional": {}
+  },
+  "jobtypes": {
+    "adcirc_experiment": {
+      "MODEL": "ADCIRC",
+      "class": "ADCIRC_Experiment",
+      "file": "cloudflow/job/ADCIRC_Experiment.py",
+      "required": {
+        "MODEL": "cloudflow/job/ADCIRC_Experiment.py:90",
+        "JOBTYPE": "cloudflow/job/ADCIRC_Experiment.py:91",
+        "EXEC": "cloudflow/job/ADCIRC_Experiment.py:93",
+        "MODEL_DIR": "cloudflow/job/ADCIRC_Experiment.py:94"
+      },
+      "optional": {
+        "APP": "cloudflow/job/ADCIRC_Experiment.py:92",
+        "SAVEDIR": "cloudflow/job/ADCIRC_Experiment.py:95",
+        "INPUTFILE": "cloudflow/job/ADCIRC_Experiment.py:96"
+      },
+      "conditional": {}
+    },
+    "adcircforecast": {
+      "MODEL": "ADCIRC",
+      "class": "ADCIRCForecast",
+      "file": "cloudflow/job/ADCIRCForecast.py",
+      "required": {
+        "MODEL": "cloudflow/job/ADCIRCForecast.py:114",
+        "CDATE": "cloudflow/job/ADCIRCForecast.py:116",
+        "HH": "cloudflow/job/ADCIRCForecast.py:117",
+        "COMROT": "cloudflow/job/ADCIRCForecast.py:118",
+        "EXEC": "cloudflow/job/ADCIRCForecast.py:119",
+        "BUCKET": "cloudflow/job/ADCIRCForecast.py:120",
+        "BCKTFLDR": "cloudflow/job/ADCIRCForecast.py:121",
+        "ININAME": "cloudflow/job/ADCIRCForecast.py:122",
+        "OUTDIR": "cloudflow/job/ADCIRCForecast.py:123",
+        "OCEANIN": "cloudflow/job/ADCIRCForecast.py:124",
+        "OCNINTMPL": "cloudflow/job/ADCIRCForecast.py:125"
+      },
+      "optional": {
+        "APP": "cloudflow/job/ADCIRCForecast.py:115"
+      },
+      "conditional": {}
+    },
+    "adcircreanalysis": {
+      "MODEL": "ADCIRC",
+      "class": "ADCIRCReanalysis",
+      "file": "cloudflow/job/ADCIRCReanalysis.py",
+      "required": {
+        "MODEL": "cloudflow/job/ADCIRCReanalysis.py:109",
+        "YYYY": "cloudflow/job/ADCIRCReanalysis.py:111",
+        "BUCKET": "cloudflow/job/ADCIRCReanalysis.py:112",
+        "BCKTFLDR": "cloudflow/job/ADCIRCReanalysis.py:113",
+        "OUTDIR": "cloudflow/job/ADCIRCReanalysis.py:114",
+        "ProjectName": "cloudflow/job/ADCIRCReanalysis.py:115",
+        "ProjectHome": "cloudflow/job/ADCIRCReanalysis.py:116",
+        "ADCIRCHome": "cloudflow/job/ADCIRCReanalysis.py:117",
+        "GRID": "cloudflow/job/ADCIRCReanalysis.py:118",
+        "CONFIG": "cloudflow/job/ADCIRCReanalysis.py:119",
+        "CONFIGTMPL": "cloudflow/job/ADCIRCReanalysis.py:120",
+        "contact": "cloudflow/job/ADCIRCReanalysis.py:121",
+        "WRITERCORES": "cloudflow/job/ADCIRCReanalysis.py:122"
+      },
+      "optional": {
+        "APP": "cloudflow/job/ADCIRCReanalysis.py:110"
+      },
+      "conditional": {}
+    },
+    "dflowfm_experiment": {
+      "MODEL": "DFLOWFM",
+      "class": "DFLOWFM_Experiment",
+      "file": "cloudflow/job/DFLOWFM_Experiment.py",
+      "required": {
+        "MODEL": "cloudflow/job/DFLOWFM_Experiment.py:86",
+        "JOBTYPE": "cloudflow/job/DFLOWFM_Experiment.py:87",
+        "EXEC": "cloudflow/job/DFLOWFM_Experiment.py:89",
+        "DFLOW_LIB": "cloudflow/job/DFLOWFM_Experiment.py:90",
+        "MODEL_DIR": "cloudflow/job/DFLOWFM_Experiment.py:91"
+      },
+      "optional": {
+        "APP": "cloudflow/job/DFLOWFM_Experiment.py:88"
+      },
+      "conditional": {}
+    },
+    "fvcom_experiment": {
+      "MODEL": "FVCOM",
+      "class": "FVCOM_Experiment",
+      "file": "cloudflow/job/FVCOM_Experiment.py",
+      "required": {
+        "MODEL": "cloudflow/job/FVCOM_Experiment.py:87",
+        "JOBTYPE": "cloudflow/job/FVCOM_Experiment.py:88",
+        "EXEC": "cloudflow/job/FVCOM_Experiment.py:90",
+        "MODEL_DIR": "cloudflow/job/FVCOM_Experiment.py:91",
+        "CASE_FILE": "cloudflow/job/FVCOM_Experiment.py:92"
+      },
+      "optional": {
+        "APP": "cloudflow/job/FVCOM_Experiment.py:89"
+      },
+      "conditional": {}
+    },
+    "fvcomforecast": {
+      "MODEL": "FVCOM",
+      "class": "FVCOMForecast",
+      "file": "cloudflow/job/FVCOMForecast.py",
+      "required": {
+        "MODEL": "cloudflow/job/FVCOMForecast.py:116",
+        "CDATE": "cloudflow/job/FVCOMForecast.py:118",
+        "HH": "cloudflow/job/FVCOMForecast.py:119",
+        "NHOURS": "cloudflow/job/FVCOMForecast.py:120",
+        "COMROT": "cloudflow/job/FVCOMForecast.py:121",
+        "SAVEDIR": "cloudflow/job/FVCOMForecast.py:122",
+        "PTMP": "cloudflow/job/FVCOMForecast.py:124",
+        "DATE_REF": "cloudflow/job/FVCOMForecast.py:125",
+        "BUCKET": "cloudflow/job/FVCOMForecast.py:126",
+        "BCKTFLDR": "cloudflow/job/FVCOMForecast.py:127",
+        "OUTDIR": "cloudflow/job/FVCOMForecast.py:128",
+        "INPUTFILE": "cloudflow/job/FVCOMForecast.py:129",
+        "INTMPL": "cloudflow/job/FVCOMForecast.py:130"
+      },
+      "optional": {
+        "APP": "cloudflow/job/FVCOMForecast.py:117",
+        "EXEC": "cloudflow/job/FVCOMForecast.py:123"
+      },
+      "conditional": {}
+    },
+    "fvcomhindcast": {
+      "MODEL": "FVCOM",
+      "class": "FVCOM_Hindcast",
+      "file": "cloudflow/job/FVCOM_Hindcast.py",
+      "required": {
+        "MODEL": "cloudflow/job/FVCOM_Hindcast.py:120",
+        "JOBTYPE": "cloudflow/job/FVCOM_Hindcast.py:121",
+        "SDATE": "cloudflow/job/FVCOM_Hindcast.py:123",
+        "EDATE": "cloudflow/job/FVCOM_Hindcast.py:125",
+        "HH": "cloudflow/job/FVCOM_Hindcast.py:127",
+        "NHOURS": "cloudflow/job/FVCOM_Hindcast.py:128",
+        "COMROT": "cloudflow/job/FVCOM_Hindcast.py:129",
+        "SAVEDIR": "cloudflow/job/FVCOM_Hindcast.py:131",
+        "PTMP": "cloudflow/job/FVCOM_Hindcast.py:132",
+        "DATE_REF": "cloudflow/job/FVCOM_Hindcast.py:133",
+        "BUCKET": "cloudflow/job/FVCOM_Hindcast.py:134",
+        "BCKTFLDR": "cloudflow/job/FVCOM_Hindcast.py:135",
+        "OUTDIR": "cloudflow/job/FVCOM_Hindcast.py:136",
+        "INPUTFILE": "cloudflow/job/FVCOM_Hindcast.py:137",
+        "INTMPL": "cloudflow/job/FVCOM_Hindcast.py:138",
+        "EXEC": "cloudflow/job/FVCOM_Hindcast.py:139"
+      },
+      "optional": {},
+      "conditional": {}
+    },
+    "plotting": {
+      "MODEL": "PYTHON",
+      "class": "Plotting",
+      "file": "cloudflow/job/Plotting.py",
+      "required": {
+        "MODEL": "cloudflow/job/Plotting.py:106",
+        "JOBTYPE": "cloudflow/job/Plotting.py:107",
+        "CDATE": "cloudflow/job/Plotting.py:109",
+        "HH": "cloudflow/job/Plotting.py:110",
+        "INDIR": "cloudflow/job/Plotting.py:111",
+        "OUTDIR": "cloudflow/job/Plotting.py:112",
+        "VARS": "cloudflow/job/Plotting.py:113",
+        "BUCKET": "cloudflow/job/Plotting.py:114",
+        "BCKTFLDR": "cloudflow/job/Plotting.py:115",
+        "FSPEC": "cloudflow/job/Plotting.py:116"
+      },
+      "optional": {
+        "APP": "cloudflow/job/Plotting.py:108",
+        "VERIFDIR": "cloudflow/job/Plotting.py:120"
+      },
+      "conditional": {}
+    },
+    "plotting_diff": {
+      "MODEL": "PYTHON",
+      "class": "Plotting",
+      "file": "cloudflow/job/Plotting.py",
+      "required": {
+        "MODEL": "cloudflow/job/Plotting.py:106",
+        "JOBTYPE": "cloudflow/job/Plotting.py:107",
+        "CDATE": "cloudflow/job/Plotting.py:109",
+        "HH": "cloudflow/job/Plotting.py:110",
+        "INDIR": "cloudflow/job/Plotting.py:111",
+        "OUTDIR": "cloudflow/job/Plotting.py:112",
+        "VARS": "cloudflow/job/Plotting.py:113",
+        "BUCKET": "cloudflow/job/Plotting.py:114",
+        "BCKTFLDR": "cloudflow/job/Plotting.py:115",
+        "FSPEC": "cloudflow/job/Plotting.py:116"
+      },
+      "optional": {
+        "APP": "cloudflow/job/Plotting.py:108",
+        "VERIFDIR": "cloudflow/job/Plotting.py:120"
+      },
+      "conditional": {}
+    },
+    "python_experiment": {
+      "MODEL": "PYTHON",
+      "class": "PYTHON_Experiment",
+      "file": "cloudflow/job/PYTHON_Experiment.py",
+      "required": {
+        "MODEL": "cloudflow/job/PYTHON_Experiment.py:90",
+        "JOBTYPE": "cloudflow/job/PYTHON_Experiment.py:91",
+        "SCRIPT": "cloudflow/job/PYTHON_Experiment.py:103"
+      },
+      "optional": {
+        "APP": "cloudflow/job/PYTHON_Experiment.py:92",
+        "ARG1": "cloudflow/job/PYTHON_Experiment.py:95",
+        "ARG2": "cloudflow/job/PYTHON_Experiment.py:96",
+        "EXEC": "cloudflow/job/PYTHON_Experiment.py:100"
+      },
+      "conditional": {}
+    },
+    "roms_experiment": {
+      "MODEL": "ROMS",
+      "class": "ROMS_Experiment",
+      "file": "cloudflow/job/ROMS_Experiment.py",
+      "required": {
+        "MODEL": "cloudflow/job/ROMS_Experiment.py:86",
+        "JOBTYPE": "cloudflow/job/ROMS_Experiment.py:87",
+        "EXEC": "cloudflow/job/ROMS_Experiment.py:89",
+        "MODEL_DIR": "cloudflow/job/ROMS_Experiment.py:90",
+        "IN_FILE": "cloudflow/job/ROMS_Experiment.py:91"
+      },
+      "optional": {
+        "APP": "cloudflow/job/ROMS_Experiment.py:88"
+      },
+      "conditional": {}
+    },
+    "romsforecast": {
+      "MODEL": "ROMS",
+      "class": "ROMSForecast",
+      "file": "cloudflow/job/ROMSForecast.py",
+      "required": {
+        "MODEL": "cloudflow/job/ROMSForecast.py:133",
+        "CDATE": "cloudflow/job/ROMSForecast.py:135",
+        "HH": "cloudflow/job/ROMSForecast.py:136",
+        "COMROT": "cloudflow/job/ROMSForecast.py:137",
+        "SAVEDIR": "cloudflow/job/ROMSForecast.py:138",
+        "PTMP": "cloudflow/job/ROMSForecast.py:139",
+        "TIME_REF": "cloudflow/job/ROMSForecast.py:143",
+        "BUCKET": "cloudflow/job/ROMSForecast.py:144",
+        "BCKTFLDR": "cloudflow/job/ROMSForecast.py:145",
+        "NTIMES": "cloudflow/job/ROMSForecast.py:146",
+        "OUTDIR": "cloudflow/job/ROMSForecast.py:148",
+        "OCEANIN": "cloudflow/job/ROMSForecast.py:149",
+        "OCNINTMPL": "cloudflow/job/ROMSForecast.py:150"
+      },
+      "optional": {
+        "APP": "cloudflow/job/ROMSForecast.py:134",
+        "EXEC": "cloudflow/job/ROMSForecast.py:142",
+        "ININAME": "cloudflow/job/ROMSForecast.py:147",
+        "CPLINTMPL": "cloudflow/job/ROMSForecast.py:162",
+        "WRFINTMPL": "cloudflow/job/ROMSForecast.py:169"
+      },
+      "conditional": {}
+    },
+    "romshindcast": {
+      "MODEL": "ROMS",
+      "class": "ROMSHindcast",
+      "file": "cloudflow/job/ROMSHindcast.py",
+      "required": {
+        "MODEL": "cloudflow/job/ROMSHindcast.py:133",
+        "SDATE": "cloudflow/job/ROMSHindcast.py:135",
+        "EDATE": "cloudflow/job/ROMSHindcast.py:137",
+        "HH": "cloudflow/job/ROMSHindcast.py:138",
+        "COMROT": "cloudflow/job/ROMSHindcast.py:139",
+        "SAVEDIR": "cloudflow/job/ROMSHindcast.py:140",
+        "PTMP": "cloudflow/job/ROMSHindcast.py:141",
+        "EXEC": "cloudflow/job/ROMSHindcast.py:142",
+        "TIME_REF": "cloudflow/job/ROMSHindcast.py:143",
+        "BUCKET": "cloudflow/job/ROMSHindcast.py:144",
+        "BCKTFLDR": "cloudflow/job/ROMSHindcast.py:145",
+        "NTIMES": "cloudflow/job/ROMSHindcast.py:146",
+        "ININAME": "cloudflow/job/ROMSHindcast.py:147",
+        "OUTDIR": "cloudflow/job/ROMSHindcast.py:148",
+        "OCEANIN": "cloudflow/job/ROMSHindcast.py:149",
+        "OCNINTMPL": "cloudflow/job/ROMSHindcast.py:150"
+      },
+      "optional": {
+        "APP": "cloudflow/job/ROMSHindcast.py:134",
+        "CPLINTMPL": "cloudflow/job/ROMSHindcast.py:162",
+        "WRFINTMPL": "cloudflow/job/ROMSHindcast.py:169"
+      },
+      "conditional": {
+        "EXPNAME": "cloudflow/job/ROMSHindcast.py:155"
+      }
+    },
+    "schism_experiment": {
+      "MODEL": "SCHISM",
+      "class": "SCHISM_Experiment",
+      "file": "cloudflow/job/SCHISM_Experiment.py",
+      "required": {
+        "MODEL": "cloudflow/job/SCHISM_Experiment.py:86",
+        "JOBTYPE": "cloudflow/job/SCHISM_Experiment.py:87",
+        "EXEC": "cloudflow/job/SCHISM_Experiment.py:89",
+        "MODEL_DIR": "cloudflow/job/SCHISM_Experiment.py:90",
+        "NSCRIBES": "cloudflow/job/SCHISM_Experiment.py:91"
+      },
+      "optional": {
+        "APP": "cloudflow/job/SCHISM_Experiment.py:88"
+      },
+      "conditional": {}
+    },
+    "schism_hindcast": {
+      "MODEL": "SCHISM",
+      "class": "SCHISM_Hindcast",
+      "file": "cloudflow/job/SCHISM_Hindcast.py",
+      "required": {
+        "MODEL": "cloudflow/job/SCHISM_Hindcast.py:111",
+        "JOBTYPE": "cloudflow/job/SCHISM_Hindcast.py:112",
+        "CDATE": "cloudflow/job/SCHISM_Hindcast.py:114",
+        "RNDAY": "cloudflow/job/SCHISM_Hindcast.py:117",
+        "HH": "cloudflow/job/SCHISM_Hindcast.py:118",
+        "EXEC": "cloudflow/job/SCHISM_Hindcast.py:119",
+        "COMROT": "cloudflow/job/SCHISM_Hindcast.py:120",
+        "SAVEDIR": "cloudflow/job/SCHISM_Hindcast.py:122",
+        "PTMP": "cloudflow/job/SCHISM_Hindcast.py:123",
+        "NML_IN": "cloudflow/job/SCHISM_Hindcast.py:124",
+        "NML_TMPL": "cloudflow/job/SCHISM_Hindcast.py:125",
+        "NSCRIBES": "cloudflow/job/SCHISM_Hindcast.py:126"
+      },
+      "optional": {
+        "APP": "cloudflow/job/SCHISM_Hindcast.py:113",
+        "SDATE": "cloudflow/job/SCHISM_Hindcast.py:115",
+        "EDATE": "cloudflow/job/SCHISM_Hindcast.py:116"
+      },
+      "conditional": {}
+    },
+    "ufs_regressiontest": {
+      "MODEL": "UFS",
+      "class": "UFS_RegressionTest",
+      "file": "cloudflow/job/UFS_RegressionTest.py",
+      "required": {
+        "JOBTYPE": "cloudflow/job/UFS_RegressionTest.py:78",
+        "MODEL": "cloudflow/job/UFS_RegressionTest.py:80",
+        "APP": "cloudflow/job/UFS_RegressionTest.py:81",
+        "TESTNAME": "cloudflow/job/UFS_RegressionTest.py:82",
+        "SAVEDIR": "cloudflow/job/UFS_RegressionTest.py:83",
+        "PTMP": "cloudflow/job/UFS_RegressionTest.py:84",
+        "DISKNM": "cloudflow/job/UFS_RegressionTest.py:85"
+      },
+      "optional": {
+        "SKIPCOMPILE": "cloudflow/job/UFS_RegressionTest.py:86"
+      },
+      "conditional": {}
+    },
+    "wrf_hydro_experiment": {
+      "MODEL": "WRF_HYDRO",
+      "class": "WRF_Hydro_Experiment",
+      "file": "cloudflow/job/WRF_Hydro_Experiment.py",
+      "required": {
+        "MODEL": "cloudflow/job/WRF_Hydro_Experiment.py:83",
+        "JOBTYPE": "cloudflow/job/WRF_Hydro_Experiment.py:84",
+        "EXEC": "cloudflow/job/WRF_Hydro_Experiment.py:86",
+        "MODEL_DIR": "cloudflow/job/WRF_Hydro_Experiment.py:87"
+      },
+      "optional": {
+        "APP": "cloudflow/job/WRF_Hydro_Experiment.py:85"
+      },
+      "conditional": {}
+    }
+  }
+}
