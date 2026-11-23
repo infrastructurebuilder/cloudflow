@@ -74,7 +74,18 @@ sed -i 's|#!/usr/bin/env -S python3 -u|#!/usr/bin/env /save/'"$USER"'/miniforge3
 ```
 
 ### Configure Model Job Specifications
-Edit or create your target model job configuration file. Pre-configured templates (ADCIRC, FVCOM, ROMS, SCHISM, D-Flow FM) reside in `Cloud-Sandbox/cloudflow/job.configs/MODEL_EXPERIMENTS/`.
+Edit or create your target model job configuration file. Pre-configured templates (ADCIRC, FVCOM, ROMS, SCHISM, D-Flow FM) are in cloudflow's `examples/configs/job.configs/MODEL_EXPERIMENTS/`.
+
+> **Where the descriptions are (since 2026-11-23):** the pre-configured job
+> descriptions this guide names (`MODEL_EXPERIMENTS/*.experiment`) are
+> cloudflow's own, in its `examples/configs/job.configs/MODEL_EXPERIMENTS/`;
+> copy one beside your site's descriptions and edit the copy. The cluster
+> descriptions it names (`cluster.configs/Experiments/*.ioos`) are the IOOS
+> site's, in `csis-sandbox-configs`' `cluster.configs/Experiments/`. The
+> commands below give them as `../job.configs/…` and `../cluster.configs/…`,
+> paths of the old Cloud-Sandbox checkout; on a head node they are relative to
+> wherever your site's descriptions are (Cloud-Sandbox's spec 008 is to put
+> them on the node).
 
 ```bash
 vi ../job.configs/MODEL_EXPERIMENTS/schism.experiment
