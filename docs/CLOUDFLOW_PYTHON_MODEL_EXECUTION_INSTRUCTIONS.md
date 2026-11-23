@@ -80,6 +80,17 @@ sed -i 's|#!/usr/bin/env -S python3 -u|#!/usr/bin/env /save/'"$USER"'/miniforge3
 ```
 
 #### Step 2: Configure Job Specification
+> **Where the descriptions are (since 2026-11-23):** the pre-configured job
+> descriptions this guide names (`MODEL_EXPERIMENTS/*.experiment`) are
+> cloudflow's own, in its `examples/configs/job.configs/MODEL_EXPERIMENTS/`;
+> copy one beside your site's descriptions and edit the copy. The cluster
+> descriptions it names (`cluster.configs/Experiments/*.ioos`) are the IOOS
+> site's, in `csis-sandbox-configs`' `cluster.configs/Experiments/`. The
+> commands below give them as `../job.configs/…` and `../cluster.configs/…`,
+> paths of the old Cloud-Sandbox checkout; on a head node they are relative to
+> wherever your site's descriptions are (Cloud-Sandbox's spec 008 is to put
+> them on the node).
+
 Edit `../job.configs/MODEL_EXPERIMENTS/python.experiment`:
 ```json
 {
