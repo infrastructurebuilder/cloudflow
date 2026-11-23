@@ -231,7 +231,7 @@ def job_schema() -> dict[str, object]:
         reads = dict_reads(path)
         jobtypes[jobtype] = {"MODEL": model, "class": cls, "file": path.as_posix(), **reads}
     return {
-        "about": "Keys cloudflow reads from a job description. Written by cloudflow's tools/configs_schema.py.",
+        "about": "Keys cloudflow reads from a job description. Written by cloudflow's tools/configs_schema.py.",  # noqa: E501
         "read_by": factory.as_posix(),
         "common": common,
         "jobtypes": jobtypes,
