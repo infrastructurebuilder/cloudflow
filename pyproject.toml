@@ -1,6 +1,6 @@
 [project]
 name = "cloudflow"
-version = "1.6.0b0"
+version = "1.6.0b1"
 description = "Workflows for cloud based numerical weather prediction"
 readme = "README.md"
 license = "BSD-3-Clause"
